@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: SAS research group, HFT, Helmut Schmidt University
+# SPDX-License-Identifier: CC0-1.0
+
+# Jupyter home and checkpoint directories.
+/notebooks/.ipynb_checkpoints/
+/notebooks/\~/
+
+# Compiled Python bytecode.
+__pycache__/
+*.pyc
