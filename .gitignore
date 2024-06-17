@@ -8,3 +8,6 @@
 # Compiled Python bytecode.
 __pycache__/
 *.pyc
+
+# Benchmarking outputs.
+benchmarks/*.npy
