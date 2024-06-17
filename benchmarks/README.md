@@ -12,14 +12,25 @@ The scripts in this file run timing benchmarks on the application algorithms in 
 library. They use the same databases as the benchmarks reported in the paper; these
 databases are in this directory. The database filenames give the number of mission
 groups (areas of a repeated mission) and the type of coordinate system used by the
-database. They save a NumPy data file for each set of trials; each row in the file
-contains the base mission ID, the base mission number, the time (in seconds) to complete
-the algorithm, the stage at which the candidate set of legs was empty, and the number of
-partner legs it found. The stage of the exit is indicated by the following integer
-values:
+database.
+
+The change detection benchmark save a NumPy data file for each set of trials; each row
+in the file contains the base mission ID, the base mission number, the time (in seconds)
+to complete the algorithm, the stage at which the candidate set of legs was empty, and
+the number of partner legs it found. The stage of the exit is indicated by the following
+integer values:
 
     1 - no overlapping candidates found in database.
     2 - no candidates met the course difference criteria.
     3 - no candidates met the distance criteria.
     4 - no candidates met the success rate threshold.
     5 - partner legs found.
+
+
+The image partner benchmark saves a similar NumPy file. Each row contains the ID of the
+base image, the time taken to complete the algorithm and the number of partner images
+found. The stage of the exit is indicated by the following integer values:
+
+    1 - no overlapping candidates found in database.
+    2 - no candidates met minimum area criteria.
+    3 - partner images found.
